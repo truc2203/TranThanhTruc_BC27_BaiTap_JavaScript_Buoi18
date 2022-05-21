@@ -3,7 +3,6 @@ function arrayJS() {
   var number = +document.getElementById("number").value;
   var result = document.getElementById("result");
   var print = document.getElementById("print");
-  // var print2 = document.getElementById("print2");
 
   array.push(number);
 
@@ -13,9 +12,6 @@ function arrayJS() {
   var task3 = minArray();
   var task4 = minPos();
   var task5 = lastEven();
-  // var task7 = sortArray();
-  // print.style.display = "Block";
-  // print2.style.display = "Block";
 
   print.innerHTML = `<p>1. Tổng số dương : ${task1}</p>
                      <p>2. Số lượng số dương : ${task2}</p>
@@ -130,66 +126,50 @@ function number() {
     if (count === 1) {
       firstNum.innerHTML = `Số nguyên tố đầu tiên : ${array[i]} `;
       return;
-    }
-    else{
-      firstNum.innerHTML = `Mảng không có SNT`
+    } else {
+      firstNum.innerHTML = `Mảng không có SNT`;
     }
     i++;
   }
 }
 
-var real = []
-function realNumber()
-{
+var real = [];
+function realNumber() {
   var realNum = document.getElementById("realNum");
-  var realArray = +document.getElementById("realArray").value
-  real.push(realArray)
-  realNum.innerHTML = `Mảng số thực : [${real}]`
+  var realArray = +document.getElementById("realArray").value;
+  real.push(realArray);
+  realNum.innerHTML = `Mảng số thực : [${real}]`;
 }
-function printRealNumber()
-{
-  var resultRealNum = document.getElementById("resultRealNum")
-  var count = 0
-  for(var i = 0; i < real.length;i++)
-  {
-    if((Math.ceil(real[i])) === (Math.floor(real[i])) )
-    {
-      count++
+function printRealNumber() {
+  var resultRealNum = document.getElementById("resultRealNum");
+  var count = 0;
+  for (var i = 0; i < real.length; i++) {
+    if (Math.ceil(real[i]) === Math.floor(real[i])) {
+      count++;
     }
   }
-  resultRealNum.innerHTML = `Số nguyên trong mảng : ${count}`
+  resultRealNum.innerHTML = `Số nguyên trong mảng : ${count}`;
 }
 
-function compareArray()
-{
-  var compareArr = document.getElementById("compareArr")
-  var countPos = 0
-  var countNeg = 0
-  for(var i = 0; i<array.length;i++)
-  {
-    if(array[i] >= 0)
-    {
-      countPos++
-    }
-    else{
-      countNeg++
+function compareArray() {
+  var compareArr = document.getElementById("compareArr");
+  var countPos = 0;
+  var countNeg = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] >= 0) {
+      countPos++;
+    } else {
+      countNeg++;
     }
   }
-  console.log(countPos)
-  console.log(countNeg)
+  console.log(countPos);
+  console.log(countNeg);
 
-  if(countPos > countNeg)
-  {
-    compareArr.innerHTML = `Sô dương (${countPos}) > số âm (${countNeg})`
-  } else if(countPos === countNeg)
-  {
-    compareArr.innerHTML = `Sô dương (${countPos}) = số âm (${countNeg})`
-  }  else
-  {
-    compareArr.innerHTML = `Sô dương (${countPos}) < số âm (${countNeg})`
+  if (countPos > countNeg) {
+    compareArr.innerHTML = `Sô dương (${countPos}) > số âm (${countNeg})`;
+  } else if (countPos === countNeg) {
+    compareArr.innerHTML = `Sô dương (${countPos}) = số âm (${countNeg})`;
+  } else {
+    compareArr.innerHTML = `Sô dương (${countPos}) < số âm (${countNeg})`;
   }
 }
-
-
-
-
