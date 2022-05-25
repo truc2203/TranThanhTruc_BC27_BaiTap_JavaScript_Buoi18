@@ -87,18 +87,14 @@ function changePosition() {
   var end = +document.getElementById("end").value;
   var change = document.getElementById("change");
   var temp = 0;
-  // var arrayPos = array;
-  for (var i = 0; i < array.length; i++) {
     temp = array[start];
     array[start] = array[end];
     array[end] = temp;
-  }
   change.innerHTML = `Mảng sau khi đổi : [${array}]`;
 }
 
 function sortArray() {
   var sort = document.getElementById("sort");
-  // var arraySort = array;
   array.sort(compare);
   sort.innerHTML = `Mảng tăng dần : ${array}`;
 }
